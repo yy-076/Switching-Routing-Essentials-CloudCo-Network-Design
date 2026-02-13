@@ -1,63 +1,27 @@
-# CT133-3-2-SRE — Cloud Co Network (Cisco Packet Tracer)
+## Enterprise Network Design & Implementation (Cisco Packet Tracer)
 
-This repository contains the design and implementation of a secure, scalable enterprise network for **Cloud Co**, simulated using **Cisco Packet Tracer**.
+This project demonstrates the design and simulation of a scalable enterprise network infrastructure using Cisco Packet Tracer. The network topology connects multiple branch offices including Kuala Lumpur Headquarters, Penang, and Johor through a WAN environment with a centralized Server Farm.
 
-The topology covers 3 main sites (**Kuala Lumpur HQ, Penang, Johor**) and a **Server Farm**, including LAN segmentation, WAN routing, WLAN deployment, and basic security hardening.
+The implementation focuses on core networking concepts such as VLAN segmentation, trunking, EtherChannel link aggregation, inter-VLAN routing using Router-on-a-Stick (ROAS), and gateway redundancy using Hot Standby Router Protocol (HSRP). Dynamic routing between sites is achieved through Open Shortest Path First (OSPF).
 
----
+Wireless connectivity is deployed in the Penang branch using a Wireless LAN Controller (WLC), with secure WLAN-to-VLAN mapping. Enterprise services including DHCP, DNS, FTP, and HTTP are configured within the Server Farm to support internal network operations.
 
-## Project Scope (What is implemented)
-### LAN (Switching)
-- VLAN segmentation (department-based)
-- Voice VLAN
-- Access ports & trunk ports (802.1Q, native VLAN)
-- EtherChannel (link aggregation + redundancy)
+Basic network security mechanisms such as SSH remote access and Layer 2 attack mitigation techniques (e.g., BPDU Guard and Port Security) are implemented to enhance reliability and resilience.
 
-### Inter-VLAN & Gateway Redundancy
-- Router-on-a-Stick (ROAS)
-- HSRP (active/standby gateway per VLAN)
+Connectivity and functionality are verified through end-device testing using ping and tracert commands.
 
-### WAN (Routing)
-- OSPF (Area 0)
-- Default static route + floating static route
-
-### Wireless (Penang)
-- WLC-based WLAN
-- VLAN-WLAN mapping + WPA2-PSK
-- LAP registration (CAPWAP)
-
-### Server Farm Services
-- DHCP, DNS, Web (HTTP), FTP
-- Verification using end-device tests
-
-### Security
-- SSH device access
-- Layer 2 attack mitigations (e.g., BPDU Guard/PortFast, port shutdown, blackhole VLAN)
+## Key Skills Demonstrated
+- VLAN Configuration & Trunking (802.1Q)
+- Inter-VLAN Routing (ROAS)
+- HSRP Gateway Redundancy
+- OSPF Dynamic Routing
+- EtherChannel (Link Aggregation)
+- Wireless LAN Controller (WLC)
+- DHCP, DNS, FTP, HTTP Server Configuration
+- SSH Secure Remote Access
+- Layer 2 Network Security
 
 ---
 
-## Repository Structure
-- `packet-tracer/` : Final Packet Tracer topology (.pkt)
-- `report/` : Final group report (PDF/DOCX)
-- `configs/` : Saved running-config outputs (routers/switches by site)
-- `addressing/` : IPv4 addressing table (VLSM)
-- `evidence/` : Screenshots + ping/tracert outputs for verification
-
----
-
-## How to Run
-1. Install **Cisco Packet Tracer**
-2. Open: `packet-tracer/CloudCo_Final.pkt`
-3. Use the report to follow verification steps (HSRP/OSPF/WLAN/Server tests)
-
----
-
-## Module Info
-- Module: CT133-3-2-SRE (Switching and Routing Essentials)
-- Simulation Tool: Cisco Packet Tracer
-
----
-
-## Credits
-Group: HELLO KITTY
-(Refer to the report for full member list and TP numbers.)
+## Tools Used
+- Cisco Packet Tracer
